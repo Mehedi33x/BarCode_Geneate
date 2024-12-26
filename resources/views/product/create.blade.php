@@ -1,9 +1,9 @@
 @extends('main')
 @section('content')
-<div>    
+<div>
  <div class="container mt-5">
     <h2 class="my-4" style="text-align: center">Add Product</h2>
-    <hr>    
+    <hr>
     <form action="{{route('prodcut.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
       <div class="form-group">
@@ -12,13 +12,17 @@
       </div>
 
       <div class="form-group">
-        <label for="price">price</label>
+        <label for="price">Price</label>
         <input type="number" min="0" class="form-control" name="price" id="price" placeholder="Price">
       </div>
-     
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="file" min="0" class="form-control" name="image" id="image">
+      </div>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </div>   
+  </div>
 </div>
 
 @endsection

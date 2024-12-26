@@ -22,12 +22,12 @@
                     <td>{{$data->name}}</td>
                     <td>{{$data->price}}</td>
                     <td>
-                        <img src="{{ url('storage/barcodes' , $data->barcode . '.png') }}"" alt="" srcset="">
+                        <img src="{{ url('/storage/barcodes' , $data->barcode . '.png') }}"" alt="" srcset="">
                     </td>
                 </tr>
                 @endforeach
-                
-                
+
+
             </tbody>
         </table>
     </div>
